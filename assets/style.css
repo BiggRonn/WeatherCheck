@@ -126,30 +126,49 @@ form{
 }
 
 .right{
+    padding-top: 2rem;
     height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
 .right div{
-    width:100%
-    height: 10pxpx;
-    background-color: red;
+
+    height: 15%;
+    font-size: 2rem;
+    color: var(--main-color)
+
 }
 
 .forecastContainer{
     height: 40vh;
-    /* background: red; */
+    background: purple;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .forecastItem{
-    height: 60px;
-    width: 60px;
+    
+    height: 50%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
+}
+
+.fTemp{
+    height: 60%;
+    font-size: 4rem;
+   
+
+}
+.fIcon{
+
 }
