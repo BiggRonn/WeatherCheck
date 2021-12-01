@@ -92,7 +92,8 @@ form{
 .currentWeather{
     height: 100%;
     width: 65%;
-    background-color: purple;
+    display: flex;
+   
 
 }
 
