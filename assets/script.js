@@ -2,7 +2,7 @@ const api_key = "7e4dc32eeeff2ca5b970045a0cb819aa";
 
 var cityName;
 
-//and array to store all search history data under one key, should make accessing data easier
+//an array to store all search history data under one key, should make accessing data easier
 var searchHistory = JSON.parse(localStorage.getItem('history')) || [];
 
 //variables to store current weather data returned from the oneCallUrl
@@ -12,7 +12,7 @@ var currentHumidity;
 var currentWind;
 var currentUVI;
 
-//variables to store 5 day forcast weather. They will be objects that are assigned attributes by the getWeather function
+//variables to store 5 day forecast weather. They will be objects that are assigned attributes by the getWeather function
 var forecastTemp = [];
 var forecastHumidity = [];
 var forecastIcon= [];
@@ -74,15 +74,15 @@ function getWeather(city) {
 function displayCurrentInfo() {
     var date = new Date();
     var weatherDisplay = document.getElementById("currentweather");
-    weatherDisplay.innerHTML =
- `<div class= "card-body">
-    <h2 class="card-title text-light">${cityName} <br>
-    ${date.toLocaleString('en-US', { month: "numeric", day: "numeric", year: "numeric" })}</h2>
-    <img class ="wIcons rounded-pill" src = "https://openweathermap.org/img/wn/${currentIcon}@2x.png"></img> <br>
-    <div class="card-text text-light">Temperature: ${currentTemp}&#176</div>
-    <div class= "card-text text-light">Humidity: ${currentHumidity}%        
-    <div class="card-text text-light">Wind-Speed: ${currentWind}</div>
-    <div class="card-text text-light">UVI: ${currentUVI}</div></div>`
+    weatherDisplay.innerHTML =`<div class="left">
+ <div class="temp">${currentTemp}</div>
+ <img class ="wIcons weatherIcon" src = "https://openweathermap.org/img/wn/${currentIcon}@2x.png"></img>
+</div>
+<div class="right">
+ <div class="humid">Humidity: ${currentHumidity}</div>
+ <div class="wind">WindSpeed: ${currentWind}</div>
+ <div class="uvi">UVI: ${currentUVI}</div>
+</div>`
 
 }
 
@@ -95,22 +95,25 @@ function displayForeCast() {
     for (let i = 0; i < 5; i++) {
         date.setDate(date.getDate() + 1);
         fiveDay.innerHTML += `
-        <div class="card fCard" >
-        <h6 class="card-title">${date.toLocaleString('en-US', { month: "numeric", day: "numeric", year: "numeric" })}</h6>
-        <img class ="wIcons" src= https://openweathermap.org/img/wn/${forecastIcon[i]}@2x.png ><img>
-        <div class="card-text">Temperature: ${forecastTemp[i]}</div><div class="card-text">Humidity: ${forecastHumidity[i]}</div>
-        </div>`
+
+        <div class="forecastItem">
+        <h6 class="fTitle">${date.toLocaleString('en-US', { month: "numeric", day: "numeric", year: "numeric" })}</h6>
+            <div class="fTemp">${forecastTemp[i]}</div>
+            <img class ="wIcons fIcon" src= https://openweathermap.org/img/wn/${forecastIcon[i]}@2x.png ><img>
+        </div>
+
+       `
         
     }
 }
 
 function displayHistory() {
-    var pastDisplay = document.getElementById("pastsearch");
+    var pastDisplay = document.getElementById("searchList");
     pastDisplay.innerHTML = "";
     ;
     
      for (let i = 0; i < searchHistory.length; i++) {
-       pastDisplay.innerHTML += `<li class="searchlist">${searchHistory[i]}</li>`;
+       pastDisplay.innerHTML += `<li class="listItem">${searchHistory[i]}</li>`;
     }
 }
 
@@ -124,7 +127,7 @@ function init() {
         var searchCity = document.getElementById("userInput").value;
         getWeather(searchCity);
     })
-    document.getElementById("pastsearch").addEventListener("click", function (e) {
+    document.getElementById("searchList").addEventListener("click", function (e) {
         e.preventDefault();
         getWeather(e.target.textContent);
     })
