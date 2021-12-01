@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Check RWH</title>
+
+</head>
+<body>
+    <div class="header">
+        <h1 class= "logo">Weather Check</h1>
+    </div>
+    <div class="mainContainer">
+        <div class="searchArea">
+            <form id="searchForm">
+                <h2>What's the Weather in...?</h2>
+                <input type="text" id="userInput" placeholder="Enter city name">
+                <button type="submit" class = "searchButton"><span class="material-icons">search</span></button>
+            </form>
+        </div>
+
+        <div class="currentWeather">
+            <div class="left">
+                <div class="temp">116</div>
+                <div class="weatherIcon">NICE</div>
+            </div>
+            <div class="right">
+                <div class="humid">Humidity</div>
+                <div class="wind">WindSpeed</div>
+                <div class="uvi">UVI</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="forecastContainer">
+        <div class="forecastItem"></div>
+    </div>
+    <div class="recentSearches">
+        <h2>Recent Searches</h2>
+        <ul class="searchList"></ul>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

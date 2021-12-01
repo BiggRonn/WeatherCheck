@@ -1,0 +1,154 @@
+:root {
+    --main-color: #011f4b;
+    --color2:  #03396c;
+    --color3: #005b96;
+    --color4: #6497b1;
+    --color5: #b3cde0;
+
+    font-family: 'Roboto', sans-serif;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 4rem;
+
+    display: flex;
+    background-color: var(--main-color);
+    align-items: center;
+    
+}
+
+.header h1{
+    margin-left: 2rem;
+
+    color: white;
+}
+
+.mainContainer{
+    border-bottom: 2px solid var(--main-color);
+    height: 60vh;
+    background-color: ;
+    display: flex;
+}
+
+.searchArea{
+    /* background-image: url(./images/Cloud.jpg);
+    background-position: center;
+    background-size: contain; */
+    
+    color: var(--main-color);
+    height: 100%;
+    width: 35%;
+    border-right: 2px solid var(--main-color);
+    display: flex;
+
+    
+
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    
+}
+
+.searchArea input{
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    height: 2rem;
+    width: 100%;
+}
+
+.searchArea button{
+
+    border-radius: 10px;
+    background: var(--color3);
+    color: white;
+    height: 2rem;
+    width: 70px;
+    cursor: pointer;
+
+}
+.searchArea button:hover{
+    background-image: linear-gradient(to right, rgb(139, 145, 212), blue);
+}
+
+.currentWeather{
+    height: 100%;
+    width: 65%;
+    background-color: purple;
+
+}
+
+.left{
+    height: 100%;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.temp{
+    font-size: 8rem;
+    font-weight: 600;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weatherIcon{
+
+    height: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right div{
+    width:100%
+    height: 10pxpx;
+    background-color: red;
+}
+
+.forecastContainer{
+    height: 40vh;
+    /* background: red; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecastItem{
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+}
