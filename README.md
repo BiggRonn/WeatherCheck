@@ -4,6 +4,7 @@ Basic weather application that will give current weather in a city and a 5 day f
 This app is a demonstration on basic HTML, CSS, JavaScript, and Design understanding. I wanted to make it serve the basic function of telling you current weather and a 5day forecast for a particular city effectively in both mobile and desktop screen sizes. Right now, the MVP I have here works well and displays information clearly, that is great. There are many features I could add in the future, although I plan to move on to more complex projects for now.
 
 ## Link to Deployed App
+https://biggronn.github.io/WeatherCheck/
 
 
 ## Future Developments
