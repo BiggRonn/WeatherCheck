@@ -174,11 +174,11 @@ form {
     list-style: none;
     cursor: pointer;
 
-    background-color: green;
+   ;
 }
 
 .searchList li {
-    margin-bottom: 0.5em;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 1200px) {
