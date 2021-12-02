@@ -83,7 +83,7 @@ function displayCurrentInfo() {
 </div>
 <div class="right">
  <div class="humid">Humidity: ${currentHumidity}%</div>
- <div class="wind">WindSpeed: ${currentWind}mph</div>
+ <div class="wind">Wind: ${currentWind}mph</div>
  <div class="uvi">UVI: ${currentUVI}</div>
 </div>`
 
