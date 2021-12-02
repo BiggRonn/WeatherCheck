@@ -75,12 +75,15 @@ function displayCurrentInfo() {
     var date = new Date();
     var weatherDisplay = document.getElementById("currentweather");
     weatherDisplay.innerHTML =`<div class="left">
- <div class="temp">${currentTemp}</div>
+    <h1 className="cityName">${cityName}</h1>
+ <div class="temp">${currentTemp}&#176</div>
+ <div>
  <img class ="wIcons weatherIcon" src = "https://openweathermap.org/img/wn/${currentIcon}@2x.png"></img>
+ </div>
 </div>
 <div class="right">
- <div class="humid">Humidity: ${currentHumidity}</div>
- <div class="wind">WindSpeed: ${currentWind}</div>
+ <div class="humid">Humidity: ${currentHumidity}%</div>
+ <div class="wind">WindSpeed: ${currentWind}mph</div>
  <div class="uvi">UVI: ${currentUVI}</div>
 </div>`
 
