@@ -83,7 +83,7 @@ function displayCurrentInfo() {
 </div>
 <div class="right">
  <div class="humid">Humidity: ${currentHumidity}%</div>
- <div class="wind">WindSpeed: ${currentWind}mph</div>
+ <div class="wind">Wind: ${currentWind}mph</div>
  <div class="uvi">UVI: ${currentUVI}</div>
 </div>`
 
@@ -101,7 +101,7 @@ function displayForeCast() {
 
         <div class="forecastItem">
         <h6 class="fTitle">${date.toLocaleString('en-US', { month: "numeric", day: "numeric", year: "numeric" })}</h6>
-            <div class="fTemp">${forecastTemp[i]}</div>
+            <div class="fTemp">${forecastTemp[i]}&#176</div>
             <img class ="wIcons fIcon" src= https://openweathermap.org/img/wn/${forecastIcon[i]}@2x.png ><img>
         </div>
 
@@ -123,12 +123,14 @@ function displayHistory() {
 function init() {
    
         displayHistory();
+        getWeather(searchHistory[(searchHistory.length-1)] || "Phoenix");
     
 
     document.getElementById("searchForm").addEventListener("submit", function (e) {
         e.preventDefault();
         var searchCity = document.getElementById("userInput").value;
-        getWeather(searchCity);
+        //function in parameter will capitalize the first letter of the searched city before passing to getWeather function
+        getWeather(searchCity.charAt(0).toUpperCase() + searchCity.slice(1));
     })
     document.getElementById("searchList").addEventListener("click", function (e) {
         e.preventDefault();
