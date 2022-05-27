@@ -110,12 +110,12 @@ form {
 }
 
 .weatherIcon {
-    height: min(80%, 150px);
+    height: min(80%, 130px);
     width: max(8vw, 80px);
 
     background-color: var(--color3);
 
-    border-radius: 20%;
+    border-radius: 40%;
 }
 
 .right {
@@ -137,7 +137,7 @@ form {
     height: 40vh;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -150,7 +150,7 @@ form {
     justify-content: center;
 
     border: 2px solid var(--main-color);
-    border-radius: 10%;
+    border-radius: 3%;
     background-color: var(--color4);
 }
 
@@ -199,11 +199,9 @@ form {
     .cityName {
         font-size: 2rem;
     }
-    .temp {
-        
-    }
+    
     .weatherIcon{
-        height: 70%;
+        height: 50px;
     }
     .forecastContainer {
         height: 30vh;
